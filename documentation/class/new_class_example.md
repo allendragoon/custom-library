@@ -1,5 +1,7 @@
 # Creating New Class
 
+___
+
 ### Locate the Module
 It is recommended to place your library inside ReplicatedStorage or any other appropriate location. 
 You can require the `ModuleScript` using the `require` function.
@@ -10,7 +12,6 @@ local library = require(directory.ModuleScript)
 local class_module = library.Class
 ```
 Make sure to replace `directory.ModuleScript` with the actual directory path to your `ModuleScript`.
-
 ___
 
 ### Creating a new class
@@ -59,7 +60,7 @@ local class = class_module.new({
     },
 })
 ```
-Additionally, `nestedTable` contains another sub-table called `subTable`, which includes a function func and a user data value userData. Please replace "userdata" with an actual userdata value.
+Additionally, `nestedTable` contains another sub-table called `subTable`, which includes a function func and a user data value `userData`. Please replace `userdata` with an actual `userdata` value.
 ___
 ### Expanding sub tables
 This code snippet provides a basic structure for creating and organizing data structures and functions in Table form. It can serve as a starting point for building more complex applications or systems.
@@ -118,8 +119,8 @@ coroutine.resume(co)
 ```
 ##### Output
 ```
-  Coroutine function started.
-  Coroutine function ended.
+Coroutine function started.
+Coroutine function ended.
 ```
 ___
 
