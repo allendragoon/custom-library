@@ -1,7 +1,7 @@
 # Creating New Class
 
 #### Locate the Module
-###### Recommanded to put Library inside of ReplicatedStorage
+##### Recommanded to put Library inside of ReplicatedStorage
 ```lua
 local library = require(directory.ModuleScript)
 
