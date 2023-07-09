@@ -100,3 +100,58 @@ local class = class_module.new({
 })
 
 ```
+### Running Table
+This demonstrates the sequential execution of a coroutine function using multiple` resume()` calls. Each `resume()` call allows the coroutine to execute a portion of its code until it encounters a `yield()` statement. The yielded values are printed as output during the execution of the coroutine function.
+```lua
+local co = coroutine.create(class.class.advancedTable.coroutineFunc)
+coroutine.resume(co)
+coroutine.resume(co)  
+coroutine.resume(co) 
+coroutine.resume(co) 
+coroutine.resume(co) 
+```
+Output
+```
+  Coroutine function started.
+  Coroutine function ended.
+```
+
+### Outputting the table
+To output the contents of the table, you can utilize the `print_tables` function provided by the class library. This function enables you to conveniently display the table's data structure and values.
+```lua
+class:print_tables(class.class)
+```
+```lua
+class_module:print_tables(class.class)
+```
+### Output
+```
+   ▼  {
+    ["advancedTable"] =  ▼  {
+       ["anotherFunc"] = "function",
+       ["coroutineFunc"] = "function",
+       ["customObject"] =  ▼  {
+          ["description"] = "An example of a custom object",
+          ["name"] = "Custom Object",
+          ["nestedObject"] =  ▼  {
+             ["prop1"] = "Property 1",
+             ["prop2"] = "Property 2"
+          }
+       }
+    },
+    ["nestedTable"] =  ▼  {
+       ["array"] =  ▼  {
+          [1] = 3,
+          [2] = 4,
+          [3] = 5
+       },
+       ["bool"] = true,
+       ["str"] = "Hello",
+       ["subTable"] =  ▼  {
+          ["func"] = "function"
+       }
+    },
+    ["num1"] = 1,
+    ["num2"] = 2
+  }
+```
