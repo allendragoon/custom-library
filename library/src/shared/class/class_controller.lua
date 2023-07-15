@@ -5,7 +5,9 @@ class_controller.__index = class_controller
 
 --————————————————————————————————————————————————————————————————————--
 
-function class_controller.new(data)
+function class_controller.new(data: string)
+	if not (data) then return warn("Please provided a string.") end
+
 	local self = { tables = {} }
 	
 	table.insert(self.tables, data)
@@ -14,7 +16,7 @@ end
 
 --————————————————————————————————————————————————————————————————————--
 
-function class_controller:append_class(data)
+function class_controller:append_class(data: string)
 	if not (data) then return warn("No data found.") end
 	table.insert(self.tables, data)
 end

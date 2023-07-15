@@ -11,6 +11,7 @@ local library = require(directory.ModuleScript)
 
 local class_module = library.Class
 ```
+> **Note**
 Make sure to replace `directory.ModuleScript` with the actual directory path to your `ModuleScript`.
 ___
 
@@ -60,6 +61,7 @@ local class = class_module.new({
     },
 })
 ```
+> **Note**
 Additionally, `nestedTable` contains another sub-table called `subTable`, which includes a function func and a user data value `userData`. Please replace `userdata` with an actual `userdata` value.
 ___
 ### Expanding sub tables

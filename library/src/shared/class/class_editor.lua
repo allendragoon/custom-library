@@ -31,7 +31,7 @@ end
 
 --————————————————————————————————————————————————————————————————————--
 
-function ClassEditor:addTable(classInstance, key, value)
+function ClassEditor:addTable(classInstance: string, key: string, value: string)
 	if not classInstance.tables or type(classInstance.tables) ~= "table" then
 		warn("Invalid class instance or missing tables.") return
 	end
@@ -43,7 +43,7 @@ end
 
 --————————————————————————————————————————————————————————————————————--
 
-function ClassEditor:removeTable(classInstance, key)
+function ClassEditor:removeTable(classInstance: string, key: string)
 	if not classInstance.tables or type(classInstance.tables) ~= "table" then
 		warn("Invalid class instance or missing tables.") return
 	end
